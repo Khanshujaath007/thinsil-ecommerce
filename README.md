@@ -1,4 +1,4 @@
-#DEPOLY LINK: - 
+#DEPLOY LINK: - 
 https://main--creative-kashata-45d172.netlify.app/
 
 
