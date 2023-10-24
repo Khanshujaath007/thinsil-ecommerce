@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import { mobile } from "../responsive";
 
+/*
+Users can create account 
+if new to the application
+*/
+
 const Container = styled.div`
   width: 100vw;
   height: 100vh;

@@ -4,7 +4,8 @@ import styled from "styled-components";
 import { sliderItems } from "../data";
 import {mobile} from "../responsive";
 /*
-Slider Component -> Main page image slider -> shows image corousel
+Slider Component -> Main page image slider 
+-> shows image corousel
 */
 const Container = styled.div`
   width: 100%;

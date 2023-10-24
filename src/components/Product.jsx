@@ -5,6 +5,11 @@ import {
 } from "@mui/icons-material";
 import styled from "styled-components";
 
+/*
+represents each single product item
+when all products all listed 
+*/
+
 const Info = styled.div`
   opacity: 0;
   width: 100%;

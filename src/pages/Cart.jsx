@@ -5,6 +5,10 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { mobile } from "../responsive";
 
+/*
+Represents shopping cart items 
+*/
+
 const Container = styled.div``;
 
 const Wrapper = styled.div`

@@ -2,6 +2,11 @@ import styled from "styled-components";
 import Product from "./Product";
 import { products } from "../data";
 
+/*
+Renders a list of products 
+can be fetch from API or products dummy array can be used
+*/
+
 const Container = styled.div`
   padding: 20px;
   display: flex;
@@ -9,7 +14,7 @@ const Container = styled.div`
   justify-content: space-between;
 `;
 
-function Products() {
+function Products({ category, filters, sort }) {
   return (
     <Container>
       {products.map((item) => (

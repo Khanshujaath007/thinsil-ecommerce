@@ -2,7 +2,8 @@ import { Search, ShoppingBagOutlined } from "@mui/icons-material";
 import { Badge } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
-import {mobile} from "../responsive";
+import { mobile } from "../responsive";
+import { useNavigate } from "react-router-dom";
 /*
 Navbar Component -> Navigation menu contains signup / register / cart and logo 
 */
@@ -52,6 +53,7 @@ const Center = styled.div`
 
 const Logo = styled.h1`
   font-weight: bold;
+  cursor: pointer;
   ${mobile({ fontSize: "24px" })}
 `;
 const Right = styled.div`
@@ -70,6 +72,22 @@ const MenuItem = styled.div`
 `;
 
 function Navbar() {
+  const navigate = useNavigate();
+
+  const navigateToRegister = () => {
+    //navigate to /register
+    navigate("/register");
+  };
+  const navigateToSignin = () => {
+    //navigate to /login
+    navigate("/login");
+  };
+
+  const navigateToCart = () => {
+    //navigate to /cart
+    navigate("/cart");
+  };
+
   return (
     <Container>
       <Wrapper>
@@ -81,14 +99,16 @@ function Navbar() {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>ECOMM</Logo>
+          <Logo onClick={() => navigate("/")}>ECOMM</Logo>
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
+          <MenuItem onClick={navigateToRegister}>REGISTER</MenuItem>
+          <MenuItem onClick={navigateToSignin}>SIGN IN</MenuItem>
           <MenuItem>
             <Badge badgeContent={4} color="primary">
-              <ShoppingBagOutlined></ShoppingBagOutlined>
+              <ShoppingBagOutlined
+                onClick={navigateToCart}
+              ></ShoppingBagOutlined>
             </Badge>
           </MenuItem>
         </Right>
